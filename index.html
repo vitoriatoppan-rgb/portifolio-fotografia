@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/v4rgydDC/favcon.png">
+    <title>Galeria de FTDI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@450;600&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>Portifólio FTDI</h1>
+  <p>Vitória de Souza Toppan</p>
+</header>
+ 
+<div class="filtros">
+  <button class="ativo" onclick="filtrar('todos', this)">Todos</button>
+  <button onclick="filtrar('angulo', this)">Ângulo</button>
+  <button onclick="filtrar('enquadramento', this)">Enquadramento</button>
+  <button onclick="filtrar('composição', this)">Composição</button>
+  <button onclick="filtrar('light-paint', this)">Light Paint</button>
+  <button onclick="filtrar('motion-blur', this)">Motion Blur</button>
+  <button onclick="filtrar('espelhos-paisagem', this)">Espelhos e Paisagem</button>
+  <button onclick="filtrar('dupla-esposicao', this)">Dupla Exposição</button>
+  <button onclick="filtrar('texturas', this)">Texturas</button>
+  <button onclick="filtrar('colagem', this)">Colagem</button>
+  <button onclick="filtrar('produtos', this)">Produtos</button>
+  <button onclick="filtrar('propaganda', this)">Propaganda</button>
+
+
+
+</div>
+ 
+<div class="galeria">
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/Y4jvBVNb/produto1.jpg')">
+    <img src="https://i.ibb.co/Y4jvBVNb/produto1.jpg" alt="Produto 1">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+  
+  <div class="item" data-tag="angulo" onclick="abrir('https://i.ibb.co/5hqcN4Q3/flores3.jpg')">
+    <img src="https://i.ibb.co/5hqcN4Q3/flores3.jpg" alt="Flores ângulo baixo">
+    <div class="legenda">
+      <div class="titulo">Ângulos Fotográficos</div>
+      <div class="tag">Ângulo</div>
+    </div>
+  </div>
+ 
+  <div class="item" data-tag="propaganda" onclick="abrir('https://i.ibb.co/1Ysqq5Lr/folder.png')">
+    <img src="https://i.ibb.co/1Ysqq5Lr/folder.png" alt="Folder Trento">
+    <div class="legenda">
+      <div class="titulo">Folder</div>
+      <div class="tag">Propaganda</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="motion-blur" onclick="abrir('https://i.ibb.co/FLJdN6K6/motion-Blur1.jpg')">
+    <img src="https://i.ibb.co/FLJdN6K6/motion-Blur1.jpg" alt="Motion Blur">
+    <div class="legenda">
+      <div class="titulo">Motion Blur</div>
+      <div class="tag">Efeito de movimento</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="espelhos-paisagem" onclick="abrir('https://i.ibb.co/bjj4srXL/espelho6.jpg')">
+    <img src="https://i.ibb.co/bjj4srXL/espelho6.jpg" alt="Espelhos e Paisagem">
+    <div class="legenda">
+      <div class="titulo">Espelhos e Paisagem</div>
+      <div class="tag">Uso do reflexo do espelho e paisagens</div>
+    </div>
+  </div>
+  
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/pBTq2QGG/produto6.jpg')">
+    <img src="https://i.ibb.co/pBTq2QGG/produto6.jpg" alt="Produto 2">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+
+  <div class="item" data-tag="angulo" onclick="abrir('https://i.ibb.co/sfLCFqr/flores4.jpg')">
+    <img src="https://i.ibb.co/sfLCFqr/flores4.jpg" alt="Flores ângulo reto">
+    <div class="legenda">
+      <div class="titulo">Ângulos Fotográficos</div>
+      <div class="tag">Ângulo</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="espelhos-paisagem" onclick="abrir('https://i.ibb.co/ZpT71JsF/espelho5.jpg')">
+    <img src="https://i.ibb.co/ZpT71JsF/espelho5.jpg" alt="Espelhos e Paisagem">
+    <div class="legenda">
+      <div class="titulo">Espelhos e Paisagem</div>
+      <div class="tag">Uso do reflexo do espelho e paisagens</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="propaganda" onclick="abrir('https://i.ibb.co/rfcw2PBC/revista-trident.png')">
+    <img src="https://i.ibb.co/rfcw2PBC/revista-trident.png" alt="Revista Trident">
+    <div class="legenda">
+      <div class="titulo">Revista Trident</div>
+      <div class="tag">Propaganda</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="angulo" onclick="abrir('https://i.ibb.co/cc7FLgLL/flores6.jpg')">
+    <img src="https://i.ibb.co/cc7FLgLL/flores6.jpg" alt="Flores ângulo alto">
+    <div class="legenda">
+      <div class="titulo">Ângulos Fotográficos</div>
+      <div class="tag">Ângulo</div>
+    </div>
+  </div> 
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/21dV8LwJ/produto5.jpg')">
+    <img src="https://i.ibb.co/21dV8LwJ/produto5.jpg" alt="Produto 3">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="motion-blur" onclick="abrir('https://i.ibb.co/WvbrHKDT/motionblur.jpg')">
+    <img src="https://i.ibb.co/WvbrHKDT/motionblur.jpg" alt="Motion Blur">
+    <div class="legenda">
+      <div class="titulo">Motion Blur</div>
+      <div class="tag">Efeito de movimento</div>
+    </div>
+  </div>
+ 
+  <div class="item" data-tag="enquadramento" onclick="abrir('https://i.ibb.co/hx644p87/flores2.jpg')">
+    <img src="https://i.ibb.co/hx644p87/flores2.jpg" alt="Flores enquadramento lateral">
+    <div class="legenda">
+      <div class="titulo">Enquadramento Lateral</div>
+      <div class="tag">Enquadramento</div>
+    </div>
+  </div>
+ 
+  <div class="item" data-tag="light-paint" onclick="abrir('https://i.ibb.co/KxfDdfyp/light.jpg')">
+    <img src="https://i.ibb.co/KxfDdfyp/light.jpg" alt="Light Paint">
+    <div class="legenda">
+      <div class="titulo">Light Paint</div>
+      <div class="tag">Fotografia com luz</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/dsbqHgFF/produto4.jpg')">
+    <img src="https://i.ibb.co/dsbqHgFF/produto4.jpg" alt="Produto 4">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="enquadramento" onclick="abrir('https://i.ibb.co/ZRddZDwF/flores1.jpg')">
+    <img src="https://i.ibb.co/ZRddZDwF/flores1.jpg" alt="Flores enquadramento com composição">
+    <div class="legenda">
+      <div class="titulo">Enquadramento com composição, flores sendo derramadas</div>
+      <div class="tag">Enquadramento</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="espelhos-paisagem" onclick="abrir('https://i.ibb.co/dwTnhg6Z/espelho4.jpg')">
+    <img src="https://i.ibb.co/dwTnhg6Z/espelho4.jpg" alt="Espelhos e Paisagem">
+    <div class="legenda">
+      <div class="titulo">Espelhos e Paisagem</div>
+      <div class="tag">Uso do reflexo do espelho e paisagens</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="composição" onclick="abrir('https://i.ibb.co/1J8Qk62G/ponto-Foco.jpg')">
+    <img src="https://i.ibb.co/1J8Qk62G/ponto-Foco.jpg" alt="Ponto de foco">
+    <div class="legenda">
+      <div class="titulo">Ponto de Foco</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/QFjbhSVV/produto3.jpg')">
+    <img src="https://i.ibb.co/QFjbhSVV/produto3.jpg" alt="Produto 5">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="espelhos-paisagem" onclick="abrir('https://i.ibb.co/JWvRFrdH/espelho3.jpg')">
+    <img src="https://i.ibb.co/JWvRFrdH/espelho3.jpg" alt="Espelhos e Paisagem">
+    <div class="legenda">
+      <div class="titulo">Espelhos e Paisagem</div>
+      <div class="tag">Uso do reflexo do espelho e paisagens</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="enquadramento" onclick="abrir('https://i.ibb.co/7tv4MPqF/flores5.jpg')">
+    <img src="https://i.ibb.co/7tv4MPqF/flores5.jpg" alt="Flores enquadramento centralizado">
+    <div class="legenda">
+      <div class="titulo">Enquadramento Centralizado</div>
+      <div class="tag">Enquadramento</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="espelhos-paisagem" onclick="abrir('https://i.ibb.co/QVNHX18/espelho2.jpg')">
+    <img src="https://i.ibb.co/QVNHX18/espelho2.jpg" alt="Espelhos e Paisagem">
+    <div class="legenda">
+      <div class="titulo">Espelhos e Paisagem</div>
+      <div class="tag">Uso do reflexo do espelho e paisagens</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/C5G0wjQ8/produto13.jpg')">
+    <img src="https://i.ibb.co/C5G0wjQ8/produto13.jpg" alt="Produto 6">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+   <div class="item" data-tag="composição" onclick="abrir('https://i.ibb.co/jvPVLwYx/alinhamento-Horizontal.jpg')">
+    <img src="https://i.ibb.co/jvPVLwYx/alinhamento-Horizontal.jpg" alt="Alinhamento Horizontal">
+    <div class="legenda">
+      <div class="titulo">Alinhamento Horizontal</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="espelhos-paisagem" onclick="abrir('https://i.ibb.co/bjPmLJkn/espelho1.jpg')">
+    <img src="https://i.ibb.co/bjPmLJkn/espelho1.jpg" alt="Espelhos e Paisagem">
+    <div class="legenda">
+      <div class="titulo">Espelhos e Paisagem</div>
+      <div class="tag">Uso do reflexo do espelho e paisagens</div>
+    </div>
+  </div>
+  
+   <div class="item" data-tag="composição" onclick="abrir('https://i.ibb.co/0V6ngXF1/Quadrante.jpg')">
+    <img src="https://i.ibb.co/0V6ngXF1/Quadrante.jpg" alt="Quadrante">
+    <div class="legenda">
+      <div class="titulo">Quadrante</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/8nfZ5Fd3/produto12.jpg')">
+    <img src="https://i.ibb.co/8nfZ5Fd3/produto12.jpg" alt="Produto 7">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+   <div class="item" data-tag="composição" onclick="abrir('https://i.ibb.co/qLvf684n/alinhamento-Vertical.jpg')">
+    <img src="https://i.ibb.co/qLvf684n/alinhamento-Vertical.jpg" alt="Alinhamento Vertical">
+    <div class="legenda">
+      <div class="titulo">Alinhamento Vertical</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+  
+  <div class="item" data-tag="dupla-esposicao" onclick="abrir('https://i.ibb.co/G4rjPDMJ/Dupla-Exposi-opng.png')">
+    <img src="https://i.ibb.co/G4rjPDMJ/Dupla-Exposi-opng.png" alt="Dupla Exposição">
+    <div class="legenda">
+      <div class="titulo">Dupla Exposição</div>
+      <div class="tag">Photoshop</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/6cr2NWWz/textura.jpg')">
+    <img src="https://i.ibb.co/6cr2NWWz/textura.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/fbMrM4J/produto11.jpg')">
+    <img src="https://i.ibb.co/fbMrM4J/produto11.jpg" alt="Produto 8">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/XQb4j9h/textura1.jpg')">
+    <img src="https://i.ibb.co/XQb4j9h/textura1.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/GfdRK4zR/textura2.jpg')">
+    <img src="https://i.ibb.co/GfdRK4zR/textura2.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/zH4npbyM/textura3.jpg')">
+    <img src="https://i.ibb.co/zH4npbyM/textura3.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/1GQZL9r1/produto10.jpg')">
+    <img src="https://i.ibb.co/1GQZL9r1/produto10.jpg" alt="Produto 9">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/HLn4Msgs/textura5.jpg')">
+    <img src="https://i.ibb.co/HLn4Msgs/textura5.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+<div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/93NbxGkz/textura4.jpg')">
+    <img src="https://i.ibb.co/93NbxGkz/textura4.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/HDbB9zvF/textura6.jpg')">
+    <img src="https://i.ibb.co/HDbB9zvF/textura6.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/NgxjrZD0/produto9.jpg')">
+    <img src="https://i.ibb.co/NgxjrZD0/produto9.jpg" alt="Produto 10">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/Q5rz4gk/textura8.jpg')">
+    <img src="https://i.ibb.co/Q5rz4gk/textura8.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="texturas" onclick="abrir('https://i.ibb.co/JWD4Zk35/textura7.jpg')">
+    <img src="https://i.ibb.co/JWD4Zk35/textura7.jpg" alt="Texturas">
+    <div class="legenda">
+      <div class="titulo">Texturas</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+    <div class="item" data-tag="colagem" onclick="abrir('https://i.ibb.co/5HKf7Ft/colagem.png')">
+    <img src="https://i.ibb.co/5HKf7Ft/colagem.png" alt="Colagem">
+    <div class="legenda">
+      <div class="titulo">Colagem</div>
+      <div class="tag">Composição Visual</div>
+    </div>
+  </div>
+
+<div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/C50xSX8t/produto8.jpg')">
+    <img src="https://i.ibb.co/C50xSX8t/produto8.jpg" alt="Produto 11">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/tpwGRVBN/produto7.jpg')">
+    <img src="https://i.ibb.co/tpwGRVBN/produto7.jpg" alt="Produto 12">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+  <div class="item" data-tag="produtos" onclick="abrir('https://i.ibb.co/sdc2RP1t/produto2.jpg')">
+    <img src="https://i.ibb.co/sdc2RP1t/produto2.jpg" alt="Produto 12">
+    <div class="legenda">
+      <div class="titulo">Fotografia de Produtos</div>
+      <div class="tag">Produto</div>
+    </div>
+  </div>
+
+</div>
+ 
+<footer>
+  <p>vitoria.toppan@edu.senai.br</p>
+</footer>
+ 
+<div class="lightbox" id="lightbox" onclick="fechar()">
+  <button class="fechar" onclick="fechar()">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+ 
+</body>
+</html>
